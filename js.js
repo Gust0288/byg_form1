@@ -18,6 +18,7 @@ async function showRecipes() {
     clone.querySelector("[data-servings]").textContent = rec.servings;
     clone.querySelector("[data-ingredients]").textContent = rec.ingredients;
     clone.querySelector("[data-allergens]").textContent = rec.allergens;
+    // clone.querySelector("[data-diet]").textContent = rec.diet;
     if (rec.studentFriendly) {
       clone.querySelector(".status").hidden = false;
     } else {
