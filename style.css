@@ -1,0 +1,95 @@
+:root {
+  .sedgwick-ave-regular {
+    font-family: "Sedgwick Ave", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+body {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  margin: 1rem;
+  gap: 2.5em;
+  background: rgb(49, 46, 46);
+  font-family: Sedgwick Ave;
+
+  > h2 {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+}
+
+.card {
+  color: rgb(222, 227, 230);
+  margin-bottom: 2.5em;
+  border: solid rgb(222, 227, 230) 1px;
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: auto;
+
+  button {
+    border: solid black 1px;
+  }
+  h2 {
+    font-size: 3rem;
+    text-decoration: underline;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+form {
+  color: rgb(222, 227, 230);
+  fieldset {
+    display: flex;
+    color: rgb(222, 227, 230);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10em;
+    border: solid rgb(222, 227, 230) 1px;
+    border-radius: min(0.2rem, 1.5svw);
+    font-family: Sedgwick Ave;
+    > * {
+      font-weight: 600;
+    }
+
+    > * label {
+      font-weight: 300;
+    }
+    > legend {
+      font-size: 1.7rem;
+    }
+    > * input,
+    textarea,
+    select {
+      background: rgb(63, 60, 60);
+    }
+  }
+  input {
+    border: solid rgb(222, 227, 230) 1px;
+    border-radius: min(0.2rem, 1.5svw);
+    padding: 0.3rem;
+  }
+  > * {
+    gap: 0.5em;
+  }
+  textarea {
+    border: solid rgb(222, 227, 230) 1px;
+    border-radius: min(0.2rem, 1.5svw);
+    padding: 0.3rem;
+  }
+
+  label {
+    font-weight: 600;
+  }
+  input:last-child {
+    margin-top: 0.5rem;
+  }
+  select {
+    border: solid rgb(222, 227, 230) 1px;
+  }
+}

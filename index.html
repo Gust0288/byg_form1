@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="js.js"></script>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend><h2>Type in you recipe</h2></legend>
+        <label for="name">Name <input type="text" name="name" /></label>
+        <label for="description"
+          >Description
+          <textarea name="description" id="" rows="3"></textarea>
+        </label>
+        <label for="ingridients"
+          >Ingridients <textarea name="ingredients" id="" rows="5"></textarea>
+        </label>
+        <label for="servings"
+          >Servings <input type="number" name="servings"
+        /></label>
+        <label for="allergens">
+          Allergens
+          <textarea name="allergens" id="allergens"></textarea>
+        </label>
+
+        <div>
+          <h3>Diet</h3>
+          <label for="vegan">
+            <input type="radio" name="diet" id="vegan" />
+            Vegan</label
+          >
+          <label for="vegetarian"
+            ><input type="radio" name="diet" id="vegetarian" />Vegetarian</label
+          >
+          <label for="none"
+            ><input type="radio" name="diet" id="none" />None</label
+          >
+        </div>
+        <select name="origin" id="origin-list">
+          <option value="">Choose origin of recipe</option>
+          <option value="Denmark">Denmark</option>
+          <option value="China">China</option>
+          <option value="Australia">Australia</option>
+        </select>
+        <label for="studentFriendly"
+          >Is it student friendly?
+          <input type="checkbox" name="studentFriendly"
+        /></label>
+
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+    <section class="recipes"></section>
+    <template>
+      <article class="card">
+        <header>
+          <div class="header-content">
+            <h2 data-name></h2>
+
+            <div>
+              <h4 data-origin></h4>
+              <dl>
+                <div>
+                  <dt class="visually-hidden">Diet</dt>
+                  <dd data-diet>Vegetarian</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <p class="status">
+            <span data-studentFriendly>Student Friendly!</span>
+          </p>
+        </header>
+        <div>
+          <h3>Ingridients:</h3>
+          <dl class="ingredient-list" data-ingredients></dl>
+        </div>
+        <div>
+          <h3>Allergens:</h3>
+          <dl class="allergens-list" data-allergens></dl>
+        </div>
+        <section>
+          <h3>Serving size:</h3>
+          <p data-servings></p>
+        </section>
+        <div class="actions">
+          <button data-id="15" data-action="delete">Slet</button>
+          <button data-id="15" data-action="update">Opdater</button>
+        </div>
+      </article>
+    </template>
+  </body>
+</html>
